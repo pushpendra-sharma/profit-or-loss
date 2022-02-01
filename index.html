@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profit or Loss</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="heading">Stock Profile & Loss Calculator</h1>
+      <form id="calculate-area">
+        <label class="input-label" for="initial-price"
+          >Initial Price
+          <input
+            class="input-text"
+            required=""
+            type="number"
+            id="initial-price"
+            placeholder="Enter initial price here"
+          />
+        </label>
+        <label class="input-label" for="stocks-quantity"
+          >Quantity of Stocks
+          <input
+            class="input-text"
+            required=""
+            type="number"
+            id="stocks-quantity"
+            placeholder="Enter the number of stocks bought"
+          />
+        </label>
+        <label class="input-label" for="current-price"
+          >Current Price
+          <input
+            class="input-text"
+            required=""
+            type="number"
+            id="current-price"
+            placeholder="Enter the current price of stocks"
+          />
+        </label>
+        <p class="error-msg"></p>
+        <button id="btn-submit" type="submit">Tell Me!!</button>
+      </form>
+      <p id="output"></p>
+    </main>
+    <footer class="footer">
+      <div class="footer-header">© | 2021 | Pushpendra Sharma</div>
+      <ul class="list-non-bullet">
+        <li class="list-item-inline">
+          <a class="link" href="https://github.com/Pushpendra-Sharma">
+            github
+          </a>
+        </li>
+        <li class="list-item-inline">
+          <a class="link" href="https://twitter.com/100Pushpendra"> twitter </a>
+        </li>
+        <li class="list-item-inline">
+          <a
+            class="link"
+            href="https://www.linkedin.com/in/ietl-pushpendra-sharma/"
+            >linkedin
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>

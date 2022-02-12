@@ -14,43 +14,36 @@ function deleteMessage(element) {
 }
 
 function calculateProfitOrLoss(initialPrice, quantity, finalPrice) {
+  let msg = "";
   if (initialPrice > finalPrice) {
     let loss = (initialPrice - finalPrice) * quantity;
     let lossPercentage = (loss / initialPrice) * 100;
-    showMessage(
-      outputRef,
-      `Hey the loss is ${loss} and percent is ${lossPercentage}`
-    );
+    msg = `Hey the loss is ${loss} and percent is ${lossPercentage}`;
   } else if (initialPrice < finalPrice) {
     let profit = (finalPrice - initialPrice) * quantity;
     let profitPercentage = (profit / initialPrice) * 100;
-    showMessage(
-      outputRef,
-      `Hey the profit is ${profit} and percent is ${profitPercentage}`
-    );
+    msg = `Hey the profit is ${profit} and percent is ${profitPercentage}`;
   } else {
-    showMessage(outputRef, `Neutral`);
+    msg = `Neutral`;
   }
-
+  return msg;
 }
 
 function submitHandler(e) {
   e.preventDefault();
-  console.log(`Hey there`);
-  // deleteMessage(errorMsgRef);
-  // deleteMessage(outputRef);
+  deleteMessage(errorMsgRef);
+  deleteMessage(outputRef);
 
   const initialPriceValue = Number(initialPriceRef.value);
   const stocksQuantityValue = Number(stocksQuantityRef.value);
   const currentPriceValue = Number(currentPriceRef.value);
 
-  calculateProfitOrLoss(
+  let message = calculateProfitOrLoss(
     initialPriceValue,
     stocksQuantityValue,
     currentPriceValue
   );
+  showMessage(outputRef, message);
 }
 
-// deleteMessage(errorMsgRef);
-// deleteMessage(outputRef);
-submitButtonRef.addEventListener("submit", submitHandler);
+submitButtonRef.addEventListener("click", submitHandler);

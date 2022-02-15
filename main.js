@@ -16,15 +16,15 @@ function deleteMessage(element) {
 function calculateProfitOrLoss(initialPrice, quantity, finalPrice) {
   let msg = "";
   if (initialPrice > finalPrice) {
-    let loss = (initialPrice - finalPrice) * quantity;
-    let lossPercentage = (loss / initialPrice) * 100;
-    msg = `Hey the loss is ${loss} and percent is ${lossPercentage}`;
+    let loss = ((initialPrice - finalPrice) * quantity).toFixed(2);
+    let lossPercentage = ((loss / initialPrice) * 100).toFixed(2);
+    msg = `Hey the loss is ${loss} and percent is ${lossPercentage}%`;
   } else if (initialPrice < finalPrice) {
-    let profit = (finalPrice - initialPrice) * quantity;
-    let profitPercentage = (profit / initialPrice) * 100;
-    msg = `Hey the profit is ${profit} and percent is ${profitPercentage}`;
+    let profit =((finalPrice - initialPrice) * quantity).toFixed(2);
+    let profitPercentage = ((profit / initialPrice) * 100).toFixed(2);
+    msg = `Hey the profit is ${profit} and percent is ${profitPercentage}%`;
   } else {
-    msg = `Neutral`;
+    msg = `No Profit No Loss`;
   }
   return msg;
 }

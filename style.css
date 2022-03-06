@@ -145,21 +145,59 @@ button:hover {
   color: var(--off-white);
 }
 
-/* footer */
+/* footer start */
 .footer {
   background-color: var(--primary-color);
-  padding: 2rem 1rem 1rem 1rem ;
+  padding: 2rem 1rem;
   text-align: center;
   color: var(--off-white);
   margin: 3rem 0 0 0;
-  font-size: smaller;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  align-content: center;
+}
+
+.list-non-bullet {
+  list-style: none;
+  padding-inline-start: 0px;
+  margin: 0px;
+}
+
+.list-item-inline {
+  display: inline;
+  padding: 0rem;
 }
 
 .footer .link {
-  color: var(--off-white);
+  color: white;
 }
 
 .footer .footer-header {
   font-weight: bold;
-  font-size:medium;
+  font-size: large;
 }
+
+.footer ul {
+  padding-inline-start: 0px;
+}
+/* footer end */
